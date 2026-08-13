@@ -24,7 +24,7 @@ export default function FinalCTA() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(239,246,252,0) 0%, rgba(16,58,100,0.25) 35%, rgba(3,49,90,0.55) 100%)",
+              "linear-gradient(180deg, rgba(239,246,252,0) 0%, rgba(9,9,9,0.25) 35%, rgba(9,9,9,0.55) 100%)",
           }}
         />
 
@@ -41,7 +41,7 @@ export default function FinalCTA() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <MagneticButton
                 href={BUY.mac}
-                className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-[13px] font-medium text-white shadow-[0_12px_28px_-10px_rgba(15,23,42,0.4)]"
+                className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-[13px] font-medium text-white shadow-[0_12px_28px_-10px_rgba(54,54,54,0.4)]"
               >
                 Buy for macOS — $29
                 <ArrowRight size={14} />

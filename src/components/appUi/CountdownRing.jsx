@@ -29,7 +29,7 @@ export function CountdownRing({
         style={{ border: `2px solid ${color}33` }}
       />
       <svg width={size} height={size} className="absolute inset-0 -rotate-90">
-        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#E7EBF3" strokeWidth={stroke} />
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#E1E1E1" strokeWidth={stroke} />
         <circle
           cx={size / 2}
           cy={size / 2}

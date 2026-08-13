@@ -135,7 +135,7 @@ function FooterWorldCanvas() {
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 bg-[#05070d] text-slate-300 pt-16 pb-12 overflow-hidden border-t border-white/10">
+    <footer className="relative z-10 bg-[#090909] text-slate-300 pt-16 pb-12 overflow-hidden border-t border-white/10">
       {/* Ambient background glow */}
       <div className="pointer-events-none absolute left-1/2 bottom-0 h-[350px] w-[600px] -translate-x-1/2 rounded-full bg-sky-500/10 blur-[120px]" />
 

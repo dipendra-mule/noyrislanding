@@ -3,7 +3,7 @@ import { Database, EyeOff, KeyRound } from "lucide-react";
 import Reveal from "./Reveal.jsx";
 
 const POINTS = [
-  { Icon: Database, title: "Local-only storage", desc: "Every rule, session and event lives in a local SQLite file on your disk — no server, no sync." },
+  { Icon: Database, title: "Local-only storage", desc: "Every rule, session and event lives in a local SQLite file on your disk — no cloud sync, no telemetry." },
   { Icon: EyeOff, title: "No keylogging", desc: "NOYRIS reads the foreground app, window title, and tab domain — never keystrokes." },
   { Icon: KeyRound, title: "You grant access", desc: "Accessibility permission is asked for, explained, and revocable at any time." },
 ];
@@ -22,7 +22,7 @@ export default function Privacy() {
             <h2 className="mb-4 font-display text-3xl font-semibold tracking-tight">Watched by no one but you.</h2>
             <p className="text-[15px] leading-relaxed text-mist">
               NOYRIS runs entirely on your machine. There&rsquo;s no server keeping a copy of your history, no
-              keylogging, and no browsing data leaving your device &mdash; ever.
+              keylogging, and no browsing history leaving your device &mdash; ever.
             </p>
           </div>
           <div className="relative grid gap-4 sm:grid-cols-3">

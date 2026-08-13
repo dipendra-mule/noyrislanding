@@ -18,7 +18,7 @@ const CAT_LABELS = {
 
 const DAY_LABELS = ["S", "M", "T", "W", "T", "F", "S"];
 
-const NO_DATA_BG = "#E7EBF3";
+const NO_DATA_BG = "#E1E1E1";
 
 /* Same seeded RNG the app uses for its demo data. */
 function mulberry32(seed) {

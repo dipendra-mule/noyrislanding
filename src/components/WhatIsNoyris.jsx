@@ -46,7 +46,7 @@ export default function WhatIsNoyris() {
       <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {JOBS.map((j, i) => (
           <Reveal key={j.title} delay={i * 80} variant="up">
-            <div className="h-full rounded-2xl border border-brandblue/40 bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-18px_rgba(11,24,35,0.25)]">
+            <div className="h-full rounded-2xl border border-brandblue/40 bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-18px_rgba(31,31,31,0.25)]">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brandblue text-brand">
                 <j.Icon size={18} strokeWidth={2} />
               </div>

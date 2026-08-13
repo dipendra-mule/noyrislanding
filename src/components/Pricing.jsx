@@ -18,7 +18,7 @@ export default function Pricing() {
     <section id="pricing" className="relative z-10 overflow-hidden bg-navy py-24 px-6 sm:py-32">
       <div
         className="pointer-events-none absolute -left-24 -top-24 h-80 w-80 rounded-full opacity-20 blur-3xl animate-blobFloat"
-        style={{ background: "#0F172A" }}
+        style={{ background: "#363636" }}
       />
       <div
         className="pointer-events-none absolute -bottom-32 -right-24 h-96 w-96 rounded-full opacity-10 blur-3xl animate-blobFloat"
@@ -27,7 +27,7 @@ export default function Pricing() {
 
       <div className="relative mx-auto max-w-xl text-center">
         <Reveal>
-          <span className="font-mono text-xs uppercase tracking-widest text-white bg-brand px-3 py-1 rounded-full shadow-[0_8px_20px_-8px_rgba(15,23,42,0.4)]">
+          <span className="font-mono text-xs uppercase tracking-widest text-white bg-brand px-3 py-1 rounded-full shadow-[0_8px_20px_-8px_rgba(54,54,54,0.4)]">
             Pricing
           </span>
           <h2 className="mt-5 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -42,7 +42,7 @@ export default function Pricing() {
 
         <Reveal delay={120} variant="scale">
           <div className="relative mt-14 rounded-[28px] border border-white/[0.1] bg-white/[0.05] p-8 shadow-[0_40px_80px_-24px_rgba(0,0,0,0.65)] backdrop-blur-xl sm:p-10">
-            <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_10px_24px_-8px_rgba(15,23,42,0.4)]">
+            <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_10px_24px_-8px_rgba(54,54,54,0.4)]">
               Lifetime license
             </span>
 
@@ -75,7 +75,7 @@ export default function Pricing() {
             <MagneticButton
               href={BUY.mac}
               strength={0.2}
-              className="mt-9 flex w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-[13px] font-semibold text-white shadow-[0_16px_36px_-12px_rgba(15,23,42,0.4)] transition-all duration-300 hover:shadow-[0_20px_44px_-12px_rgba(15,23,42,0.6)]"
+              className="mt-9 flex w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-[13px] font-semibold text-white shadow-[0_16px_36px_-12px_rgba(54,54,54,0.4)] transition-all duration-300 hover:shadow-[0_20px_44px_-12px_rgba(54,54,54,0.6)]"
             >
               Buy Noyris for macOS — $29
               <ArrowRight size={14} />

@@ -52,7 +52,7 @@ const Hero = forwardRef(function Hero(_, ref) {
               {typed}
               <span className="animate-cursorBlink">|</span>
             </span>
-            <span className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-brand text-ink transition-transform hover:scale-105">
+            <span className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-brand text-white transition-transform hover:scale-105">
               <ArrowUp size={15} strokeWidth={2.25} />
             </span>
           </div>

@@ -23,7 +23,7 @@ function DownloadButton({ href, primary, icon: Icon, title, sub }) {
       download
       className={`group flex w-full items-center gap-4 rounded-2xl border px-5 py-4 transition-all duration-300 ${
         primary
-          ? "border-transparent bg-brand text-white shadow-[0_16px_36px_-12px_rgba(15,23,42,0.5)] hover:shadow-[0_20px_44px_-12px_rgba(15,23,42,0.65)]"
+          ? "border-transparent bg-brand text-white shadow-[0_16px_36px_-12px_rgba(54,54,54,0.5)] hover:shadow-[0_20px_44px_-12px_rgba(54,54,54,0.65)]"
           : "border-white/[0.12] bg-white/[0.04] text-white/90 backdrop-blur-md hover:border-white/25 hover:bg-white/[0.08]"
       }`}
     >
@@ -49,17 +49,41 @@ function DownloadButton({ href, primary, icon: Icon, title, sub }) {
   );
 }
 
-export default function DownloadPage() {
+/* Success/download page. `platform` comes from the URL route:
+ *   #/success / #/download              -> auto-detect the visitor's OS
+ *   #/success-mac / #/download-mac      -> macOS page (Mac checkout redirect)
+ *   #/success-windows / #/download-windows -> Windows page (Win checkout redirect)
+ * The purchased platform is highlighted and listed first; the other is still
+ * available underneath. */
+export default function DownloadPage({ platform }) {
   const [os, setOs] = useState(null);
 
   useEffect(() => {
     setOs(detectOS());
   }, []);
 
-  const primary = os === "windows" ? "windows" : "mac";
+  const primary = platform || os || "mac";
+
+  const headline =
+    platform === "mac"
+      ? "You're all set, welcome to Noyris on macOS."
+      : platform === "windows"
+        ? "You're all set, welcome to Noyris on Windows."
+        : "You're all set, welcome to Noyris.";
+
+  const buttons =
+    primary === "windows"
+      ? [
+          { href: RELEASE.windows.exe, icon: Monitor, title: "Download for Windows", sub: RELEASE.windows.exeLabel, primary: true },
+          { href: RELEASE.mac.dmg, icon: Apple, title: "Download for macOS", sub: RELEASE.mac.dmgLabel, primary: false },
+        ]
+      : [
+          { href: RELEASE.mac.dmg, icon: Apple, title: "Download for macOS", sub: RELEASE.mac.dmgLabel, primary: true },
+          { href: RELEASE.windows.exe, icon: Monitor, title: "Download for Windows", sub: RELEASE.windows.exeLabel, primary: false },
+        ];
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden bg-[#05070d] text-white">
+    <div className="min-h-screen w-full overflow-x-hidden bg-[#090909] text-white">
       {/* Ambient glow */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-gradient-to-b from-brand/40 to-transparent" />
       <div className="pointer-events-none absolute left-1/2 top-[-160px] h-[380px] w-[640px] -translate-x-1/2 rounded-full bg-sky-500/10 blur-[130px]" />
@@ -86,7 +110,7 @@ export default function DownloadPage() {
             <CheckCircle2 size={34} strokeWidth={2.2} />
           </span>
           <h1 className="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            You're all set, welcome to Noyris.
+            {headline}
           </h1>
           <p className="mt-3 max-w-md text-[14px] leading-relaxed text-white/70">
             Your payment went through. Your <span className="font-semibold text-white">license key is on its way to your email</span> —
@@ -96,27 +120,18 @@ export default function DownloadPage() {
 
         {/* Download buttons */}
         <div className="mt-10 w-full space-y-3">
-          <DownloadButton
-            href={RELEASE.mac.dmg}
-            primary={primary === "mac"}
-            icon={Apple}
-            title="Download for macOS"
-            sub={RELEASE.mac.dmgLabel}
-          />
-          <DownloadButton
-            href={RELEASE.windows.exe}
-            primary={primary === "windows"}
-            icon={Monitor}
-            title="Download for Windows"
-            sub={RELEASE.windows.exeLabel}
-          />
+          {buttons.map(({ href, icon, title, sub, primary: isPrimary }) => (
+            <DownloadButton key={title} href={href} primary={isPrimary} icon={icon} title={title} sub={sub} />
+          ))}
         </div>
 
-        <p className="mt-4 text-[12px] text-white/45">
-          Not sure which one? Choose <span className="text-white/70">Apple</span> if you're on a Mac,{" "}
-          <span className="text-white/70">Windows</span> if you're on a PC. Apple Silicon Macs use the same
-          download.
-        </p>
+        {!platform && (
+          <p className="mt-4 text-[12px] text-white/45">
+            Not sure which one? Choose <span className="text-white/70">Apple</span> if you're on a Mac,{" "}
+            <span className="text-white/70">Windows</span> if you're on a PC. Apple Silicon Macs use the same
+            download.
+          </p>
+        )}
 
         {/* Perks */}
         <div className="mt-10 grid w-full gap-3 sm:grid-cols-3">

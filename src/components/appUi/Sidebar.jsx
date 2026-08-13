@@ -32,7 +32,7 @@ const NAV_GROUPS = [
   },
 ];
 
-const THEME_DOTS = ["#57cd1b", "#F7F4EF", "#1A1714", "#71809E"];
+const THEME_DOTS = ["#57cd1b", "#F7F4EF", "#1A1714", "#363636"];
 
 /* Static port of the app's Sidebar (src/components/Sidebar.tsx) — Linen light.
  * `active` mirrors the active nav item; traffic-light clearing padding matches

@@ -17,12 +17,12 @@ export default function TopicBanSection() {
               Ban the idea, not just the domain.
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-mist">
-              Blocking youtube.com is easy &mdash; until you need it for a tutorial. Noyris scans page titles, headings, URL slugs, and search keywords against 155+ curated distraction topics in real time. If the context is distraction, it stops.
+              Blocking youtube.com is easy &mdash; until you need it for a tutorial. Noyris matches page titles, URLs, and search keywords against 180 curated distraction topics in real time. If the topic matches, it stops.
             </p>
 
             <div className="mt-8 space-y-4">
               {[
-                { title: "Smart Contextual Analysis", desc: "Differentiates educational video from entertainment feeds instantly." },
+                { title: "Topic & Keyword Matching", desc: "180 curated topics plus your own trigger phrases, matched against titles, URLs and search queries." },
                 { title: "Custom Keyword Triggers", desc: "Add your own trigger phrases and topic rules tailored to your workflow." },
                 { title: "Instant Notification Banner", desc: "Subtle full-screen overlay tells you exactly which topic rule intercepted the distraction." },
               ].map((f, idx) => (
@@ -43,7 +43,7 @@ export default function TopicBanSection() {
 
           {/* Right: Real App Screenshot */}
           <Reveal delay={150} variant="scale">
-            <div className="overflow-hidden rounded-[24px] border border-line bg-card shadow-[0_20px_60px_rgba(15,23,42,0.14)]">
+            <div className="overflow-hidden rounded-[24px] border border-line bg-card shadow-[0_20px_60px_rgba(54,54,54,0.14)]">
               <div className="flex h-11 items-center justify-between border-b border-line bg-paper/60 px-4">
                 <div className="flex items-center gap-2">
                   <div className="h-3 w-3 rounded-full bg-[#FF5F56]" />

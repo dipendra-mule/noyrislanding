@@ -15,7 +15,7 @@ export default function Nav({ heroRef }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [heroRef]);
 
-  const linkColor = scrolled ? "#5B7387" : "rgba(255,255,255,0.82)";
+  const linkColor = scrolled ? "#6E675F" : "rgba(255,255,255,0.82)";
 
   return (
     <header
@@ -28,7 +28,7 @@ export default function Nav({ heroRef }) {
           <NoyrisLogo size={16} className={scrolled ? "text-brand" : "text-white"} />
           <span
             className="font-display text-[15px] font-semibold tracking-tight transition-colors duration-500"
-            style={{ color: scrolled ? "#0B1823" : "white" }}
+            style={{ color: scrolled ? "#1A1714" : "white" }}
           >
             NOYRIS
           </span>
@@ -47,7 +47,7 @@ export default function Nav({ heroRef }) {
           href="#download"
           strength={0.2}
           className="rounded-full px-4 py-2 text-[13px] font-medium transition-colors duration-300"
-          style={{ background: "#0F172A", color: "#FFFFFF" }}
+          style={{ background: "#363636", color: "#FFFFFF" }}
         >
           Get started
         </MagneticButton>

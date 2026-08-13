@@ -5,11 +5,11 @@ import Reveal from "./Reveal.jsx";
 const FAQS = [
   {
     q: "What exactly does Noyris block?",
-    a: "Five things, at whatever precision you want: whole apps, whole domains (youtube.com), URL patterns (youtube.com/shorts/*), individual YouTube channels (@mkbhd), subreddits (r/relationships), and topics — 155 curated topics across 27 categories, matched against titles, URLs and search queries. Nothing is blocked by default; every rule is opt-in.",
+    a: "Six things, at whatever precision you want: whole apps, whole domains (youtube.com), URL patterns (youtube.com/shorts/*), individual YouTube channels (@mkbhd), subreddits (r/relationships), and topics — 180 curated topics across 38 categories, matched against titles, URLs and search queries. Nothing is blocked by default; every rule is opt-in.",
   },
   {
     q: "How does website blocking actually work?",
-    a: "A free companion browser extension (Chrome, Edge and other Chromium browsers, plus Safari) enforces site rules using the browser\u2019s native request blocking. When a rule matches, the tab is closed before the page loads. Desktop apps are blocked and closed directly by Noyris itself.",
+    a: "There\u2019s no browser extension. Noyris itself watches the foreground app and, in the browser, the active tab. When a rule matches, it raises a full-screen overlay on top of whatever you were using, names the rule that caught you, and closes the offending tab \u2014 via the browser\u2019s automation on macOS, or by closing the browser process on Windows. Desktop apps are blocked and closed the same way.",
   },
   {
     q: "What permissions does it need on macOS, and why?",
@@ -17,7 +17,7 @@ const FAQS = [
   },
   {
     q: "Can I still quit out of a focus session?",
-    a: "Quitting takes a deliberate hold-to-confirm gesture, so you can\u2019t bail by reflex. If you genuinely need in, you can override a block for five minutes \u2014 paid for with coins you\u2019ve earned from focused work (1 coin per 2 minutes, 1 coin per override minute). It\u2019s an honest trade, not a trap.",
+    a: "Quitting takes a deliberate hold-to-confirm gesture, so you can\u2019t bail by reflex. If you genuinely need in, you can override a block for five minutes \u2014 paid for with coins you\u2019ve earned from focused work (1 coin per minute of focus, plus a bonus for longer sessions, and 5 coins per 5-minute override). It\u2019s an honest trade, not a trap.",
   },
   {
     q: "Does it keep working when I close the window?",

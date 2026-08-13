@@ -28,7 +28,7 @@ export default function KidsAndPrivacy() {
               </div>
               <h3 className="mt-6 font-display text-xl font-semibold">Kids Mode & Strict Enforcement</h3>
               <p className="mt-2 text-sm text-mist leading-relaxed">
-                Enable Kids Mode to instantly close unauthorized apps and websites without warning overlays. Tightened 1.5s background polling ensures unbreakable parental control.
+                Enable Kids Mode to instantly close unauthorized apps and websites without warning overlays. Foreground polling tightens to 1 second while Kids Mode is on, for unbreakable parental control.
               </p>
               <ul className="mt-6 space-y-2 text-xs font-mono text-mist">
                 <li className="flex items-center gap-2">✓ Instant silent close on blocked apps</li>

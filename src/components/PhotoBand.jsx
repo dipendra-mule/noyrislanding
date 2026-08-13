@@ -21,7 +21,7 @@ export default function PhotoBand() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(239,246,252,0.9) 0%, rgba(11,24,35,0.35) 28%, rgba(11,24,35,0.5) 72%, rgba(239,246,252,0.9) 100%)",
+              "linear-gradient(180deg, rgba(239,246,252,0.9) 0%, rgba(31,31,31,0.35) 28%, rgba(31,31,31,0.5) 72%, rgba(239,246,252,0.9) 100%)",
           }}
         />
 
