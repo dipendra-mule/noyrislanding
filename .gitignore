@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Release binaries (installers are uploaded manually / hosted separately)
+release/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+
+# Env / secrets
+.env
+.env.local
+*.local
+
+# Unused source-image folders (kept out of the repo)
+skyimages/
+screenshotsUI/

@@ -1,0 +1,57 @@
+{
+  "name": "noyris-landing",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/copy-release.mjs",
+    "preview": "vite preview",
+    "electron:dev": "vite & electron electron/main.js",
+    "electron:build": "vite build && electron-builder",
+    "electron:build:mac": "vite build && electron-builder --mac",
+    "electron:build:win": "vite build && electron-builder --win",
+    "electron:build:all": "vite build && electron-builder -mw"
+  },
+  "build": {
+    "appId": "com.noyris.landing",
+    "productName": "Noyris",
+    "icon": "build/icon.png",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "mac": {
+      "target": ["dmg", "zip"],
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "entitlements": "electron/entitlements.mac.plist",
+      "entitlementsInherit": "electron/entitlements.mac.plist",
+      "extendInfo": {
+        "NSAppleEventsUsageDescription": "NOYRIS needs AppleEvents automation permission to read active browser tab titles for focus rule checking.",
+        "NSAccessibilityUsageDescription": "NOYRIS needs Accessibility permission to track foreground app activity and active window titles."
+      }
+    },
+    "win": {
+      "target": ["nsis", "portable"]
+    }
+  },
+  "dependencies": {
+    "lucide-react": "^0.383.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "electron": "^43.3.0",
+    "electron-builder": "^26.15.3",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.3.1"
+  }
+}

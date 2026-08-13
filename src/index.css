@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F7F4EF;
+  color: #1A1714;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #0F172A;
+  color: #FFFFFF;
+}
+
+:focus-visible {
+  outline: 2px solid #0F172A;
+  outline-offset: 3px;
+}
+
+/* draw-on underline for nav links */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* button shine sweep */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+.btn-shine:hover::before {
+  left: 130%;
+}
+
+/* thin scrollbars for appUi panels (heatmap grid) */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: #D9D2C7;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #C9C1B3;
+}
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #D9D2C7 transparent;
+}
+
+/* container queries for the app panels: the demo windows are narrower than the
+ * full app window, so grids size to the panel content, not the viewport */
+.cq-panel {
+  container-type: inline-size;
+}
+@container (min-width: 560px) {
+  .cq-grid-2to4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@container (min-width: 1280px) {
+  .cq-grid-2to4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* glassy text: translucent white with a soft reflection glow so it reads
+ * like frosted glass catching the light behind it */
+.glass-text {
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 0 14px rgba(255, 255, 255, 0.35),
+    0 0 2px rgba(255, 255, 255, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
