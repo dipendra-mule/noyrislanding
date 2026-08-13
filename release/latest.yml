@@ -1,0 +1,8 @@
+version: 0.3.0
+files:
+  - url: Noyris-Setup-0.3.0.exe
+    sha512: bo2CYxx+erCu3qntfINMPBbPJzKvZjT81wiflCDrYtMWBK79T8odEpOErQpmcAzJB+3kDlJUYmKPMYiHr5uUnQ==
+    size: 131566713
+path: Noyris-Setup-0.3.0.exe
+sha512: bo2CYxx+erCu3qntfINMPBbPJzKvZjT81wiflCDrYtMWBK79T8odEpOErQpmcAzJB+3kDlJUYmKPMYiHr5uUnQ==
+releaseDate: '2026-08-13T05:23:04.705Z'

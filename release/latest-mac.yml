@@ -1,0 +1,11 @@
+version: 0.3.0
+files:
+  - url: Noyris-0.3.0-arm64-mac.zip
+    sha512: dzR5uZT3M/kohLulLpR3zE5JB21Ls2RpmMm61L4iH4aprLFmPFO/q6DA2hC1UJ5qAeLQ+vgrjEvkzBGBNLgXaQ==
+    size: 161255489
+  - url: Noyris-0.3.0-arm64.dmg
+    sha512: LZGAHWbJziP8qJxj/4jejaCF+Nm77BPL/bd4fQxLl2AiR6LdTRk+ca+eroxrxrRSsbEquqtJciDs4VK6OpKCbw==
+    size: 160519440
+path: Noyris-0.3.0-arm64-mac.zip
+sha512: dzR5uZT3M/kohLulLpR3zE5JB21Ls2RpmMm61L4iH4aprLFmPFO/q6DA2hC1UJ5qAeLQ+vgrjEvkzBGBNLgXaQ==
+releaseDate: '2026-08-13T05:21:08.194Z'

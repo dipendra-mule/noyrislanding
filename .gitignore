@@ -4,8 +4,13 @@ node_modules/
 # Build output
 dist/
 
-# Release binaries (installers are uploaded manually / hosted separately)
-release/
+# Release binaries (too large for git — GitHub rejects files >100MB).
+# The folder itself is tracked; drop installers in here and upload them
+# to GitHub Releases / your host, NOT through git.
+release/*.dmg
+release/*.exe
+release/*.zip
+release/*.blockmap
 
 # OS / editor cruft
 .DS_Store
